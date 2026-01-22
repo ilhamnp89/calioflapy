@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Flappy Character Game</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- MENU UTAMA -->
+  <div id="menu">
+    <h1>Flappy Game</h1>
+    <button id="playButton">Play</button>
+  </div>
+
+  <!-- CHARACTER SELECT -->
+  <div id="characterSelect" class="hidden">
+    <h2>Pilih Karakter</h2>
+    <div class="characters">
+      <img src="char1.png" onclick="selectCharacter(0)">
+      <img src="char2.png" onclick="selectCharacter(1)">
+      <img src="char3.png" onclick="selectCharacter(2)">
+      <img src="char4.png" onclick="selectCharacter(3)">
+    </div>
+    <button onclick="startGame()">Mulai</button>
+  </div>
+
+  <!-- GAME CANVAS -->
+  <canvas id="gameCanvas" width="320" height="480" class="hidden"></canvas>
+
+  <!-- SCORE -->
+  <div id="scoreBoard" class="hidden">
+    Score: <span id="score">0</span>
+  </div>
+
+  <!-- GAME OVER SCREEN -->
+  <div id="gameOverScreen" class="hidden">
+    <h2>Game Over!</h2>
+    <p>Score: <span id="finalScore">0</span></p>
+    <button onclick="restartGame()">Restart</button>
+    <button onclick="goToMenu()">Menu</button>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
